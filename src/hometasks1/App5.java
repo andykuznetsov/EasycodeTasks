@@ -1,4 +1,4 @@
-package hometasks_1; /**
+package hometasks1; /**
  * Created by a1 on 16.12.16.
  */
 import java.util.Scanner;

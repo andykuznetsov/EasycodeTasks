@@ -1,4 +1,4 @@
-package hometasks_3;
+package hometasks3;
 
 import java.io.IOException;
 import java.util.Arrays;

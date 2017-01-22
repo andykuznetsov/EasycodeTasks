@@ -1,8 +1,7 @@
-package hometasks_3;
+package hometasks3;
 
 import java.io.IOException;
 import java.util.Arrays;
-import java.util.Random;
 import java.util.Scanner;
 
 
