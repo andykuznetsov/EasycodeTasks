@@ -7,11 +7,23 @@ import java.text.SimpleDateFormat;
  */
 public class Student {
     // Variables
-    public int numberInGroup;
-    public String firstName, secondName;
-    public SimpleDateFormat dateOfBirth = new SimpleDateFormat("dd.MM.yyyy");
-    public String nationality;
-    public double medialScore;
+    private int numberInGroup;
+    private String firstName, secondName;
+    private SimpleDateFormat dateOfBirth = new SimpleDateFormat("dd.MM.yyyy");
+    private String nationality;
+    protected double medialScore;
+    private Hometask[] arrayOfHometasks;
+
+    // Constructor
+    public Student(int numberInGroup, String firstName, String secondName, SimpleDateFormat dateOfBirth, String nationality, double medialScore, Hometask[] arrayOfHometasks) {
+        this.numberInGroup = numberInGroup;
+        this.firstName = firstName;
+        this.secondName = secondName;
+        this.dateOfBirth = dateOfBirth;
+        this.nationality = nationality;
+        this.medialScore = medialScore;
+        this.arrayOfHometasks = arrayOfHometasks;
+    }
 
 
     // Getters
@@ -44,18 +56,7 @@ public class Student {
         this.numberInGroup = numberInGroup;
     }
 
-    public void setMedialScore(double medialScore) {
-        this.medialScore = medialScore;
-    }
-
-
-    // Constructor
-    public Student(int numberInGroup, String firstName, String secondName, SimpleDateFormat dateOfBirth, String nationality, double medialScore) {
-        this.numberInGroup = numberInGroup;
-        this.firstName = firstName;
-        this.secondName = secondName;
-        this.dateOfBirth = dateOfBirth;
-        this.nationality = nationality;
+    private void setMedialScore(double medialScore) {
         this.medialScore = medialScore;
     }
 

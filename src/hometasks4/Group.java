@@ -8,19 +8,13 @@ import java.text.SimpleDateFormat;
  */
 public class Group {
 
-    public int number;
-    public String faculty;
+    private int number;
+    private String faculty;
 
-    SimpleDateFormat firstDate = new SimpleDateFormat("01.01.1990");
-    SimpleDateFormat secondDate = new SimpleDateFormat("05.05.1995");
 
-    public Student student1 = new Student(1, "Ivan", "Ivanov", firstDate, "Ukraine", 4.5);
-    public Student student2 = new Student(2, "Petro", "Petrov", secondDate, "Poland", 3.7);
+    public Student[] arrayOfStudents;
 
-    Student[] arrayOfStudents = {student1, student2};
-
-    public int amount = arrayOfStudents.length;
-    public static double medialScore;
+    public int amount;
 
     public double getMedialScore(){
         double sum = 0;
@@ -30,10 +24,14 @@ public class Group {
         return sum / arrayOfStudents.length;
     }
 
-    public Group(int number, String faculty, int amount, double medialScore) {
+    private double medialScore;
+
+    public Group(int number, String faculty, Student[] arrayOfStudents) {
         this.number = number;
         this.faculty = faculty;
-        this.amount = amount = arrayOfStudents.length;
+        this.arrayOfStudents = arrayOfStudents;
+        this.amount = arrayOfStudents.length;
+        this.medialScore = getMedialScore();
     }
 
     public int getNumber() {

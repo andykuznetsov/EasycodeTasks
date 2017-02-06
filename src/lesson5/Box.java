@@ -21,6 +21,21 @@ public class Box implements GetSize, Cloneable {
 
     private Box[] boxes;
 
+    public void setLength(double length) {
+        this.length = length;
+        {
+            throw new IllegalArgumentException();
+        }
+    }
+
+    public void setWidth(double width) {
+        this.width = width;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
     public Date getBoxDate() {
         return boxDate;
     }
